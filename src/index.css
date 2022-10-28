@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    max-width: 800px;
+    padding: 30px;
+    margin: 20px auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.field-set {
+    padding: 10px;
+}
+
+.data-display {
+    margin-top: 20px;
+}
