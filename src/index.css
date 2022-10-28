@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: -4px;
+    border: 1px solid black;
+}
+
+.input {
+    height: 40px;
+    width: 200px;
+}
