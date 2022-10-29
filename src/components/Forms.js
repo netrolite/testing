@@ -22,7 +22,6 @@ export default function Forms(props) {
 
     console.log(props.data.data);
 
-
     return (
         <div className="form">
             <h2 className="form-header">Form:</h2>
@@ -143,11 +142,11 @@ export default function Forms(props) {
                     onChange={handleChange}
                 />
                 <label htmlFor="termsOfServiceAgree">I agree with the terms of service</label>
-            </div>
 
-            <a href="https://www.youtube.com/watch?v=4KvZDKVZVP0">
-                <button className="secret-btn"></button>
-            </a>
+                <a href="https://youtu.be/gokdrC4gQA4">
+                    <button className="secret-btn"></button>
+                </a>
+            </div>
         </div>
         
     )
