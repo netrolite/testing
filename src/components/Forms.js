@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Forms(props) {        
     function handleChange(event) {
@@ -19,6 +19,13 @@ export default function Forms(props) {
         console.log("Females not allowed!");
         handleChange();
     } 
+    
+    // code inside useEffect only runs after all of the UI has rendered
+    // logs "null" is put outside of "useEffect"
+    useEffect(() => {
+        console.log(document.getElementById("school-option1"))
+        console.log(document.getElementById("school-option2"))
+    })
 
     return (
         <div className="form">
@@ -93,22 +100,22 @@ export default function Forms(props) {
                         <input 
                             type="radio"
                             name="typeOfSchool"
-                            id="option1"
+                            id="school-option1"
                             onChange={handleChange}
                             value="private"
                         />
-                        <label htmlFor="option1">Private</label>
+                        <label htmlFor="school-option1">Private</label>
                     </div>
 
                     <div className="input-wrapper">
                             <input 
                             type="radio"
                             name="typeOfSchool"
-                            id="option2"
+                            id="school-option2"
                             onChange={handleChange}
                             value="public"
                         />
-                        <label htmlFor="option2">Public</label>
+                        <label htmlFor="school-option2">Public</label>
                     </div>
                 </fieldset>
             </div>
