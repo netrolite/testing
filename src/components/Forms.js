@@ -1,10 +1,6 @@
 import React from "react";
 
-export default function Forms(props) {
-    
-    
-    console.log(props.data.data);
-        
+export default function Forms(props) {        
     function handleChange(event) {
         const { type, name, value, checked } = event.target
 
