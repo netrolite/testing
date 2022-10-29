@@ -136,7 +136,7 @@ export default function Forms(props) {
                 <input 
                     type="checkbox"
                     checked={props.data.data.termsOfServiceAgree}
-                    value={props.data.data.termsOfServiceAgree}
+                    {/*value is on by default*/}
                     name="termsOfServiceAgree"
                     id="termsOfServiceAgree"
                     onChange={handleChange}
