@@ -18,6 +18,32 @@ export default function Forms(props) {
             <h2 className="form-header">Form:</h2>
 
             <div className="question">
+                <div className="input-wrapper">
+                    <label htmlFor="firstName">First name:</label>
+                    <input 
+                        type="text"
+                        id="firstName"
+                        className="input"
+                        name="firstName"
+                        onChange={handleChange}
+                        value={props.data.data.firstName}
+                    />
+                </div>
+            </div>
+
+            <div className="question">
+                <label htmlFor="lastName">Last name:</label>
+                <input 
+                    type="text"
+                    id="lastName"
+                    className="input"
+                    name="lastName"
+                    onChange={handleChange}
+                    value={props.data.data.lastName}
+                />
+            </div>
+
+            <div className="question">
                 <fieldset className="field-set">
                     <legend>Type of school you attend:</legend>
 
@@ -48,6 +74,7 @@ export default function Forms(props) {
             <div className="question">
                 <label htmlFor="favColor">Your favorite color:</label>
                 <select
+                    className="select"
                     id="favColor"
                     name="favColor"
                     value={props.data.data.favColor}
@@ -72,9 +99,6 @@ export default function Forms(props) {
                 />
                 <label htmlFor="termsOfServiceAgree">I agree with the terms of service</label>
             </div>
-
-
-            
         </div>
     )
 }

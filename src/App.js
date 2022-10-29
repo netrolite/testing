@@ -5,6 +5,8 @@ import DataDisplay from './components/DataDisplay';
 export default function App() {
     const [data, setData] = useState(
         {
+            firstName: "",
+            lastName: "",
             typeOfSchool: "",
             termsOfServiceAgree: false,
             favColor: "red"

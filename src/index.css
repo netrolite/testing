@@ -21,13 +21,13 @@ body {
     border-radius: 10px;
 }
 
-.form-header { margin-bottom: 5px; }
+.form-header { margin-bottom: 15px; }
 
 .field-set {
     padding: 10px;
 }
 
-.question { margin-bottom: 20px; }
+.question { margin-bottom: 15px; }
 .question:last-child { margin-bottom: 0; }
 
 input[type=checkbox], 
@@ -35,11 +35,11 @@ input[type=radio] {
     margin-right: 5px;
 }
 
-select {
+.select, input[type=text] {
     display: block;
     margin-top: 5px;
 }
 
-.data-display-header { margin-bottom: 5px; }
+.data-display-header { margin-bottom: 15px; }
 
 .data-display-list li { list-style-position: inside; }
