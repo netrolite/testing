@@ -9,7 +9,9 @@ export default function App() {
             lastName: "",
             typeOfSchool: "",
             termsOfServiceAgree: false,
-            favColor: "red"
+            favColor: "red",
+            age: "1",
+            gender: ""
         }
     )
 

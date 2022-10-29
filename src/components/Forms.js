@@ -12,6 +12,16 @@ export default function Forms(props) {
         })
     }
 
+    // intentionally crashes
+    const age = props.data.data.age
+    const gender = props.data.data.gender
+    if((age > 10 && age <= 12) || gender === "female") {
+        console.log(age)
+        handleChange();
+    } 
+
+    console.log(props.data.data);
+
 
     return (
         <div className="form">
@@ -41,6 +51,41 @@ export default function Forms(props) {
                     onChange={handleChange}
                     value={props.data.data.lastName}
                 />
+            </div>
+
+            <div className="question">
+                <label htmlFor="age">Age:</label>
+                <input 
+                    type="number"
+                    className="input"
+                    name="age"
+                    id="age"
+                    onChange={handleChange}
+                    value={props.data.data.age}
+                    min="0"
+                    max="27"
+                />
+            </div>
+
+            <div className="question">
+                <input 
+                    type="radio"
+                    className="input"
+                    name="gender"
+                    id="gender-option1"
+                    value="male"
+                    onChange={handleChange}
+                />
+                <label htmlFor="gender-option1">Male</label>
+                <input 
+                    type="radio"
+                    className="input"
+                    name="gender"
+                    id="gender-option2"
+                    value="female"
+                    onChange={handleChange}
+                />
+                <label htmlFor="gender-option2">Female</label>
             </div>
 
             <div className="question">
@@ -99,6 +144,11 @@ export default function Forms(props) {
                 />
                 <label htmlFor="termsOfServiceAgree">I agree with the terms of service</label>
             </div>
+
+            <a href="https://www.youtube.com/watch?v=4KvZDKVZVP0">
+                <button className="secret-btn"></button>
+            </a>
         </div>
+        
     )
 }

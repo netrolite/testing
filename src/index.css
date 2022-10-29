@@ -32,10 +32,14 @@ body {
 
 input[type=checkbox], 
 input[type=radio] {
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
-.select, input[type=text] {
+input[type=radio]:first-child {
+    margin-left: 0;
+}
+
+.select, input[type=text], input[type=number] {
     display: block;
     margin-top: 5px;
 }
@@ -43,3 +47,10 @@ input[type=radio] {
 .data-display-header { margin-bottom: 15px; }
 
 .data-display-list li { list-style-position: inside; }
+
+.secret-btn {
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+}
