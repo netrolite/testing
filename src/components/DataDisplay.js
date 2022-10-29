@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function DataDisplay(props) {    
-    
     return (
         <div className="data-display">
             <h1 className="data-display-header">Data entered:</h1>

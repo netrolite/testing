@@ -16,11 +16,9 @@ export default function Forms(props) {
     const age = props.data.data.age
     const gender = props.data.data.gender
     if((age > 10 && age <= 12) || gender === "female") {
-        console.log(age)
+        console.log("Females not allowed!");
         handleChange();
     } 
-
-    console.log(props.data.data);
 
     return (
         <div className="form">
@@ -136,7 +134,7 @@ export default function Forms(props) {
                 <input 
                     type="checkbox"
                     checked={props.data.data.termsOfServiceAgree}
-                    {/*value is on by default*/}
+                    value={props.data.data.termsOfServiceAgree}
                     name="termsOfServiceAgree"
                     id="termsOfServiceAgree"
                     onChange={handleChange}
