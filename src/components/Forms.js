@@ -41,11 +41,15 @@ export default function Forms(props) {
         console.log("Type of school: " + props.data.data.typeOfSchool);
     }, [props.data.data.typeOfSchool])
     
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log("Successfully submitted!");
+    }
 
     return (
-        <div className="form">
-            <h2 className="form-header">Form:</h2>
-
+        <form className="form" onSubmit={handleSubmit}>
+            <h1 className="form-header">Form:</h1>
+            
             <div className="question">
                 <div className="input-wrapper">
                     <label htmlFor="firstName">First name:</label>
@@ -167,7 +171,10 @@ export default function Forms(props) {
                     <button className="secret-btn"></button>
                 </a>
             </div>
-        </div>
+
+            <button className="submit-btn">Submit</button>
+
+        </form>
         
     )
 }
