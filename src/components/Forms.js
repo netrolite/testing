@@ -11,13 +11,16 @@ export default function Forms(props) {
             }
         })
     }
-
+    console.log(props);
     // intentionally crashes
     const age = props.data.data.age
     const gender = props.data.data.gender
     if((age > 10 && age <= 12) || gender === "female") {
-        console.log("Females not allowed!");
-        handleChange();
+        console.log("Not allowed!");
+        let x = 0;
+        while(true) {
+            x++;
+        }
     } 
     
     // code inside useEffect only runs after all of the UI has rendered
