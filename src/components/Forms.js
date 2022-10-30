@@ -36,6 +36,10 @@ export default function Forms(props) {
     useEffect(() => {
         console.log("Last name: " + props.data.data.lastName);
     }, [props.data.data.lastName])
+
+    useEffect(() => {
+        console.log("Type of school: " + props.data.data.typeOfSchool);
+    }, [props.data.data.typeOfSchool])
     
 
     return (
