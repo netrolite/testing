@@ -11,7 +11,7 @@ export default function Forms(props) {
             }
         })
     }
-    console.log(props);
+
     // intentionally crashes
     const age = props.data.data.age
     const gender = props.data.data.gender
@@ -28,6 +28,15 @@ export default function Forms(props) {
     useEffect(() => {
         console.log("age: " + props.data.data.age)
     }, [props.data.data.age])
+
+    useEffect(() => {
+        console.log(("First name: " + props.data.data.firstName));
+    }, [props.data.data.firstName])
+
+    useEffect(() => {
+        console.log("Last name: " + props.data.data.lastName);
+    }, [props.data.data.lastName])
+    
 
     return (
         <div className="form">
