@@ -26,9 +26,8 @@ export default function Forms(props) {
     // code inside useEffect only runs after all of the UI has rendered
     // logs "null" is put outside of "useEffect"
     useEffect(() => {
-        console.log(document.getElementById("school-option1"))
-        console.log(document.getElementById("school-option2"))
-    })
+        console.log("age: " + props.data.data.age)
+    }, [props.data.data.age])
 
     return (
         <div className="form">
