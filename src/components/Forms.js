@@ -24,9 +24,6 @@ export default function Forms(props) {
         }
     } 
     
-    // code inside useEffect only runs after all of the UI has rendered
-    // logs "null" is put outside of "useEffect"
-    
     function handleSubmit(event) {
         event.preventDefault();
         console.log("Successfully submitted!");
@@ -169,7 +166,7 @@ export default function Forms(props) {
                 <button className="submit-btn">Submit</button>
             </form>
             <button onClick={toggleShowWidth}>Show width</button>
-            <div>{showWidth && <WindowWidthTracker />}</div>
+            {showWidth && <WindowWidthTracker />}
         </>        
     )
 }

@@ -62,3 +62,11 @@ input[type=radio]:first-child {
 }
 
 .question:last-child { margin-bottom: 0; }
+
+.submit-btn {
+    margin-bottom: 30px;
+}
+
+.window-width {
+    margin: 15px 0 0 0;
+}

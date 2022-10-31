@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function WindowWidthTracker() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -17,6 +17,6 @@ export default function WindowWidthTracker() {
     }, [])
 
     return(
-        <h1>Window width: {windowWidth}px</h1>
+        <div className="window-width">Window width: {windowWidth}px</div>
     )
 }
