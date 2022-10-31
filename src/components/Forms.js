@@ -17,11 +17,7 @@ export default function Forms(props) {
     const age = props.data.data.age
     const gender = props.data.data.gender
     if((age > 10 && age <= 12) || gender === "female") {
-        console.log("Not allowed!");
-        let x = 0;
-        while(true) {
-            x++;
-        }
+        
     } 
     
     function handleSubmit(event) {
@@ -39,6 +35,15 @@ export default function Forms(props) {
 
     return (
         <>
+            <div className="popup">
+                <div className="img-wrapper">
+                    <img 
+                        src={process.env.PUBLIC_URL + "/media/audi.jpg"} 
+                        alt="cool car" 
+                        className="popup-image"
+                    />
+                </div>
+            </div>
             <form className="form" onSubmit={handleSubmit}>
                 <h1 className="form-header">Form:</h1>
                 

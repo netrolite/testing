@@ -70,3 +70,7 @@ input[type=radio]:first-child {
 .window-width {
     margin: 15px 0 0 0;
 }
+
+.popup-image {
+    width: 100%;
+}
