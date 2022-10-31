@@ -36,13 +36,11 @@ export default function Forms(props) {
     return (
         <>
             <div className="popup">
-                <div className="img-wrapper">
                     <img 
                         src={process.env.PUBLIC_URL + "/media/audi.jpg"} 
                         alt="cool car" 
                         className="popup-image"
                     />
-                </div>
             </div>
             <form className="form" onSubmit={handleSubmit}>
                 <h1 className="form-header">Form:</h1>

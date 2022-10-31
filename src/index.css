@@ -74,3 +74,15 @@ input[type=radio]:first-child {
 .popup-image {
     width: 100%;
 }
+
+.popup {
+    position: fixed;
+    width: 80%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    /* line below moves the image 50% up & left relative to the image's size
+    (so it appears exactly at the center of the screen)
+    */
+    transform: translate(-50%, -50%)
+}
