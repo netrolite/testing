@@ -13,6 +13,10 @@ export default function Forms(props) {
         })
     }
 
+    function handleFemale() {
+        document.querySelector(".popup").classList.add("active")
+    }
+
     // intentionally crashes
     const age = props.data.data.age
     const gender = props.data.data.gender
@@ -36,6 +40,10 @@ export default function Forms(props) {
     return (
         <>
             <div className="popup">
+                    <div className="popup-header">
+                        <h2 className="popup-text">Access Denied!?</h2>
+                        <button id="popup-close-btn">&times;</button>
+                    </div>
                     <img 
                         src={process.env.PUBLIC_URL + "/media/audi.jpg"} 
                         alt="cool car" 
@@ -101,7 +109,8 @@ export default function Forms(props) {
                         name="gender"
                         id="gender-option2"
                         value="female"
-                        onChange={handleChange}
+                        onChange={handleFemale}
+
                     />
                     <label htmlFor="gender-option2">Female</label>
                 </div>

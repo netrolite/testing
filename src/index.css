@@ -71,18 +71,48 @@ input[type=radio]:first-child {
     margin: 15px 0 0 0;
 }
 
-.popup-image {
-    width: 100%;
-}
-
 .popup {
     position: fixed;
+    background-color: white;
+    transform: translate(-50%, -50%) scale(0%) ;
+    transition: 3s ease-in-out;  
     width: 80%;
-    max-width: 800px;
+    max-width: 900px;
     top: 50%;
     left: 50%;
     /* line below moves the image 50% up & left relative to the image's size
     (so it appears exactly at the center of the screen)
     */
-    transform: translate(-50%, -50%)
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(100%) rotate(10080deg);
+}
+
+.popup-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#popup-close-btn {
+    background: none;
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.popup-image {
+    width: 100%;
+    border-radius: 10px;
 }
