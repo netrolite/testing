@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import WindowWidthTracker from "./WIndowWidthTracker";
 
 export default function Forms(props) {        
     function handleChange(event) {
@@ -25,26 +26,19 @@ export default function Forms(props) {
     
     // code inside useEffect only runs after all of the UI has rendered
     // logs "null" is put outside of "useEffect"
-    useEffect(() => {
-        console.log("age: " + props.data.data.age)
-    }, [props.data.data.age])
-
-    useEffect(() => {
-        console.log(("First name: " + props.data.data.firstName));
-    }, [props.data.data.firstName])
-
-    useEffect(() => {
-        console.log("Last name: " + props.data.data.lastName);
-    }, [props.data.data.lastName])
-
-    useEffect(() => {
-        console.log("Type of school: " + props.data.data.typeOfSchool);
-    }, [props.data.data.typeOfSchool])
     
     function handleSubmit(event) {
         event.preventDefault();
         console.log("Successfully submitted!");
     }
+
+    const [showWidth, setShowWidth] = useState(true)
+
+    function toggleShowWidth() {
+        setShowWidth(prevState => !prevState)
+    }
+
+    
 
     return (
         <>
@@ -174,6 +168,8 @@ export default function Forms(props) {
                 </div>
                 <button className="submit-btn">Submit</button>
             </form>
+            <button onClick={toggleShowWidth}>Show width</button>
+            <div>{showWidth && <WindowWidthTracker />}</div>
         </>        
     )
 }
