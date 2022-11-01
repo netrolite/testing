@@ -40,15 +40,16 @@ export default function Forms(props) {
     return (
         <>
             <div className="popup">
-                    <div className="popup-header">
-                        <h2 className="popup-text">Access Denied!?</h2>
-                        <button id="popup-close-btn">&times;</button>
-                    </div>
-                    <img 
-                        src={process.env.PUBLIC_URL + "/media/audi.jpg"} 
-                        alt="cool car" 
-                        className="popup-image"
-                    />
+                <div className="popup-background"></div>
+                <div className="popup-header">
+                    <h2 className="popup-text">Access Denied!!!</h2>
+                    <button id="popup-close-btn">&times;</button>
+                </div>
+                <img 
+                    src={process.env.PUBLIC_URL + "/media/image.jpg"} 
+                    alt="cool car" 
+                    className="popup-image"
+                />
             </div>
             <form className="form" onSubmit={handleSubmit}>
                 <h1 className="form-header">Form:</h1>
