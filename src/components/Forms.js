@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import WindowWidthTracker from "./WIndowWidthTracker";
+import WindowWidthTracker from "./WindowWidthTracker";
 
 export default function Forms(props) {        
     function handleChange(event) {
