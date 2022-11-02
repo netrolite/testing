@@ -14,14 +14,29 @@ export default function Forms(props) {
     }
 
     function handleFemale() {
-        document.querySelector(".popup").classList.add("active")
+        props.data.setData(prevState => ({
+            ...prevState,
+            gender: "female"
+        }))
     }
 
     // intentionally crashes
     const age = props.data.data.age
     const gender = props.data.data.gender
     if((age > 10 && age <= 12) || gender === "female") {
-        
+        document.querySelector(".popup").classList.add("active");
+        document.querySelector(".popup-overlay").classList.add("active");
+        let array = [];
+        console.log("Women forbidden");
+        setTimeout(() => {
+            for (let i = 0; i < 1000; i++) { array.push(i) }
+            while(true) {
+                array.forEach(item => {
+                    item = item * Math.PI;
+                    console.log(item);
+                })
+            }
+        }, 1500)
     } 
     
     function handleSubmit(event) {
@@ -40,7 +55,6 @@ export default function Forms(props) {
     return (
         <>
             <div className="popup">
-                <div className="popup-background"></div>
                 <div className="popup-header">
                     <h2 className="popup-text">Access Denied!!!</h2>
                     <button id="popup-close-btn">&times;</button>

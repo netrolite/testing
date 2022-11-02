@@ -6,16 +6,16 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 .main {
     max-width: 800px;
     padding: 30px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .forms-wrapper {
-    position: relative;
     max-width: 800px;
     padding: 25px;
     margin-top: 20px;
@@ -57,8 +57,6 @@ input[type=radio]:first-child {
     background-color: transparent;
     width: 30px;
     height: 30px;
-    position: absolute;
-    top: 100px;
     right: 0;
 }
 
@@ -114,4 +112,21 @@ input[type=radio]:first-child {
     width: 100%;
     margin-bottom: -4px;
     border-radius: 0 0 10px 10px;
+}
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-overlay.active {
+    transition: 1.5s;
+    opacity: 1;
+
 }

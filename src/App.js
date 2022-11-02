@@ -17,6 +17,7 @@ export default function App() {
 
     return (
         <main className='main'>
+            <div className="popup-overlay"></div>
             <DataDisplay
                 data={{ data, setData }}
             />
